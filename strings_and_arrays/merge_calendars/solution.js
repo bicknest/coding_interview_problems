@@ -1,24 +1,29 @@
-?/* Merge Two Calendars */
+/* Merge Two Calendars */
 
 function mergeTwoCalendars(calendar) {
-    
-    // Sort the array by startTime
+  // Sort the array by startTime
 
-    calendar.sort((a, b) => {
-        return a.startTime - b.startTime;
-    });
+  calendar.sort((a, b) => {
+    return a.startTime - b.startTime;
+  });
 
-    // Initialize array that will return our merged calendar
-    const mergedCalendar = [];
+  let updateIndex = 0;
 
-
-    // Iterate over calendar and merge
-    for (let i = 0; i < calendar.length; i++) {
-        if (calendar[i].endTime < calendar[i + 1].starTime) {
-            mergedCalendar.push(calendar[i]);
-        }
-        else
-
-
+  // Iterate over calendar and merge
+  for (let i = 1; i < calendar.length; i++) {
+    if (calendar[updateIndex].end >= calendar[i]) {
+      calendar[updateIndex].end = Math.max(
+        calendar[updateIndex].end,
+        calendar[i].end
+      );
+      calendar[updateIndex].start = Math.min(
+        calendar[updateIndex].start,
+        calendar[i].start
+      );
+    } else {
+      calendar[updateIndex] = calendar[i];
+      updateIndex++;
     }
+  }
+  return calendar;
 }
