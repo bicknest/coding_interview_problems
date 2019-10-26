@@ -1,0 +1,17 @@
+{
+  "name": "y",
+  "version": "y",
+  "description": "repo for practicing and sharing interview problmes",
+  "main": "y",
+  "repository": "y",
+  "author": "y",
+  "license": "y",
+  "private": true,
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.4.0",
+    "prettier": "^1.18.2"
+  }
+}

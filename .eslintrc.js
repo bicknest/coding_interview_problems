@@ -1,0 +1,55 @@
+module.exports = {
+  extends: [
+    'airbnb',
+    'prettier',
+  ],
+  parserOptions: {
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true,
+      legacyDecorators: true,
+    },
+  },
+  parser: 'babel-eslint',
+  rules: {
+    'arrow-parens': 'off',
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'ignore',
+      },
+    ],
+    experimentalDecorators: 'off',
+      'error',
+      {allowRequiredDefaults: true},
+    ],
+    'object-curly-spacing': ['error', 'never'],
+    'import/prefer-default-export': 'off',
+    'import/no-named-as-default': 'off',
+    'no-param-reassign': 'off',
+    'no-alert': 'off',
+    'no-console': 'error',
+    'no-plusplus': 'off',
+    'no-underscore-dangle': 'off',
+    'no-tabs': 'error',
+    'generator-star-spacing': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {devDependencies: ['**/*.test.js', '**/*.spec.js']},
+    ],
+    'no-mixed-operators': 'off',
+    'no-confusing-arrow': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'prefer-destructuring': 'off',
+    'react/destructuring-assignment': 'off',
+    'prefer-promise-reject-errors': 'off',
+  },
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
+};
