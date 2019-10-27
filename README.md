@@ -13,9 +13,7 @@ run `yarn` to install dependencies
 
 This repo's solutions have 100% test coverage
 
-This allows for you to write your own solution and use these tests to check
-
-if your solution is correct.
+This allows for you to write your own solution and use these tests to check if your solution is correct.
 
 
 # Contributing to this repo
