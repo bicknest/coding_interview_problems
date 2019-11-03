@@ -7,6 +7,27 @@ function testsFailed() {
 git diff --cached --name-status | grep ".js"
 js_changed=$?
 
+git diff --cached --name-status | grep ".py"
+python_changed=$?
+
+if [ $python_changed -eq 0 ]; then
+    echo "Changes to python files found -- running python style checks and tests"
+    pipenv run pytest
+    if [ $? -ne 0 ]
+    then
+        echo "Python test failures found, aborting commit"
+        testsFailed;
+        exit 1
+    fi
+    COVERAGE_THRESHOLD=100
+    pipenv run pytest --cov=./ --cov-fail-under=$COVERAGE_THRESHOLD
+    if [ $? -ne 0 ]
+    then
+        echo "Python test coverage for this diff is under ${COVERAGE_THRESHOLD}%, aborting commit"
+        testsFailed;
+        exit 1
+    fi
+fi
 if [ $js_changed -eq 0 ]; then
     echo "Changes to javascript files found -- running javascript style checks and tests"
     yarn run jest
