@@ -6,12 +6,18 @@ A repo to hold an assortment of problems that could come up in coding interviews
 
 clone the repo: `git clone https://github.com/bicknest/coding_interview_problems.git`
 
-run `yarn` to install dependencies
+install yarn `brew install yarn`
+
+run `yarn` to install JavaScript dependencies
+
+Install pipenv `brew install pipenv`
+
+install the python dependencies with pipenv
 
 
 # Using this repo for your own practice
 
-This repo's solutions have 100% test coverage
+This repo's solutions have 100% test coverage, a commit will be rejected if it is not fully covered
 
 This allows for you to write your own solution and use these tests to check if your solution is correct.
 
