@@ -1,4 +1,4 @@
-from solution import makeChange
+from making_change_greedy import makeChange
 
 def test_denominations():
     assert makeChange(25) == 1
