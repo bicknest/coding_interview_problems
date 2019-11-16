@@ -15,7 +15,9 @@ Install pipenv `brew install pipenv`
 install the python dependencies with pipenv
 
 Set up the symbolic link from the repos pre-commit hook to your own:
+
 On MACOSX:
+
 `cd ~/coding_interview_problems/.git/ && ln -s ../../hooks/pre_commit pre-commit`
 
 
