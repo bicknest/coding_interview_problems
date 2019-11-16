@@ -15,15 +15,18 @@ test("it shows the solution to the problem", () => {
 
     state: false
   };
+
   const foo1 = Object.create(fooProto);
   const foo2 = Object.create(fooProto);
   const foo3 = Object.create(fooProto);
+
   foo1.meta.name = "Bruce Lee";
   foo1.bar();
   foo2.meta.name = "Samuel L. Jackson";
   foo1.bar();
   foo2.bar();
   foo3.meta = { name: "Big Bird" };
+
   expect(foo1.meta.name).toEqual("Samuel L. Jackson");
   expect(foo1.isBaz()).toEqual(false);
   expect(foo2.isBaz()).toEqual(true);
