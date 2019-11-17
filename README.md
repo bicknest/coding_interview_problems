@@ -14,6 +14,8 @@ Install pipenv `brew install pipenv`
 
 install the python dependencies with pipenv
 
+`pipenv install`
+
 Set up the symbolic link from the repos pre-commit hook to your own:
 
 On MACOSX:
