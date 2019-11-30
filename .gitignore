@@ -7,3 +7,6 @@ node_modules/
 # misc artifacts
 coverage/
 yarn-error.log
+
+# dont track swap files
+*.swp
