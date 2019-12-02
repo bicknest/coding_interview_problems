@@ -6,6 +6,7 @@ node_modules/
 
 # misc artifacts
 coverage/
+.coverage
 yarn-error.log
 
 # dont track swap files
