@@ -1,9 +1,9 @@
 function pairOfSums(pairs, targetSum) {
-  const potentialAdditives = new Set();
+  const potentialAddends = new Set();
   pairs.forEach(num => {
-    potentialAdditives.add(targetSum - num);
+    potentialAddends.add(targetSum - num);
   });
-  const intersection = pairs.filter(num => potentialAdditives.has(num));
+  const intersection = pairs.filter(num => potentialAddends.has(num));
   return intersection;
 }
 
