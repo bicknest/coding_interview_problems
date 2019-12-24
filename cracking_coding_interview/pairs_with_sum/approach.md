@@ -12,4 +12,11 @@ This will take O(n) where n is the size of pairs for creating the set of addends
 
 It will take another O(n) to pass over the pairs array and look up from the hash table.
 
+** Note: If you use a list or array instead of hash table, you will save a lot on space complexity as hash tables are space intensive, but if you use this same implementation your time complexity will be at worst O(n^2)
+
 O(n) + O(n) = O(n)
+
+
+# TODO:
+
+Add an implementation that just traverses the array once, using a greedy approach.
