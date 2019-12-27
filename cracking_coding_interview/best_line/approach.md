@@ -6,3 +6,5 @@ Build a definition of every useful line (one that goes through two points), then
 if any of the other points you are given are able to be solved by this
 
 Unfortunately it seems like this is the best we can do, and this is O(n^2) time complexity.
+
+Also, with current solution, have to assume that the graph is ordered. #TODO fix that
