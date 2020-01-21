@@ -1,23 +1,26 @@
-function Fib() {
-    this.memo = {};
+function fibFactory() {
+  var memo = {};
+  var callCount = 0;
 
-    this.fibonacci = (n) => {
-        if (n < 0) {
-            return "No negative numbers in series";
-        }
-        else if (n === 0 || n === 1) {
-            return n;
-        }
+  function fibonacci(n) {
+    callCount += 1;
+    console.log(callCount);
+    if (n < 0) {
+      return "No negative numbers in series";
+    } else if (n === 0 || n === 1) {
+      return n;
+    }
 
-        if (this.memo.hasOwnProperty(n)) {
-            return this.memo[n];
-        }
+    if (memo.hasOwnProperty(n)) {
+      return memo[n];
+    }
 
-        const result = this.fibonacci(n -1) + this.fibonacci(n - 2);
-        this.memo[n] = result;
+    const result = fibonacci(n - 1) + fibonacci(n - 2);
+    memo[n] = result;
 
-        return result;
-    };
+    return result;
+  }
+  return fibonacci;
 }
 
-module.exports = Fib;
+module.exports = fibFactory;
