@@ -1,5 +1,5 @@
 function getPermutations(string) {
-  if (string.length < 2) {
+  if (string.length <= 1) {
     return new Set([string]);
   }
 
@@ -15,11 +15,10 @@ function getPermutations(string) {
   const permutations = new Set();
 
   choppedPermutations.forEach(perm => {
-    for (let position = 0; position < perm.length; position++) {
+    for (let position = 0; position <= charChopped.length; position++) {
       const permutation =
         perm.slice(0, position) + lastChar + perm.slice(position);
       permutations.add(permutation);
-      console.log(permutation);
     }
   });
   return permutations;
