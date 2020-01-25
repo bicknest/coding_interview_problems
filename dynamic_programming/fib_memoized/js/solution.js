@@ -4,7 +4,9 @@ function fibFactory() {
 
   function fibonacci(n) {
     callCount += 1;
-    console.log(callCount);
+    // uncomment out the line below to show that
+    // the closures are working properly to memoize
+    // console.log(callCount);
     if (n < 0) {
       return "No negative numbers in series";
     } else if (n === 0 || n === 1) {
