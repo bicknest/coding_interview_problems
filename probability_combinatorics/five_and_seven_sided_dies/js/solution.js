@@ -10,9 +10,9 @@ function rand7() {
 
     const outcomeNumber = (roll1 - 1) * 5 + (roll2 - 1) + 1;
 
-    if (outcomeNumber > 21) continue;
-
-    return (outcomeNumber % 7) + 1;
+    if (outcomeNumber < 22) {
+      return (outcomeNumber % 7) + 1;
+    }
   }
 }
 
