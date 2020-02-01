@@ -11,3 +11,6 @@ So as we iterate:
 If we see an opener, push it onto the stack
 If we see a closer, we check to see if it is the closer for the opener at the top of the stack
 If it is we pop from the stack, if it isn't or if the stack is empty we return false
+
+This will take O(n) time complexity, where n is the number of chars in the string.
+This will also take O(n) space complexity, as in worst case we would need to push all the chars onto a stack
