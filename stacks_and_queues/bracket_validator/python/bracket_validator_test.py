@@ -16,6 +16,6 @@ def test_return_false_with_wrong_nested():
     code = "functionCall({payload: }})[]"
     assert is_code_valid(code) is False
 
-    def test_return_false_not_enough_openers():
-        code = "functionCall()))))";
-        assert is_code_valid(code) is False
+def test_return_false_not_enough_openers():
+    code = "functionCall()))))";
+    assert is_code_valid(code) is False
