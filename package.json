@@ -1,33 +1,34 @@
 {
-  "name": "y",
-  "version": "y",
-  "description": "repo for practicing and sharing interview problmes",
-  "main": "y",
-  "repository": "y",
-  "author": "y",
-  "license": "y",
-  "private": true,
-  "dependencies": {
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.4.0",
-    "jest": "^24.9.0",
-    "prettier": "^1.18.2"
-  },
-  "jest": {
-      "collectCoverage": true,
-      "coveragePathIgnorePatterns": [
-          "/node_module/"
-      ],
-      "coverageThreshold": {
-          "global": {
-              "statements": 100,
-              "branches": 100,
-              "functions": 100,
-              "lines": 100
-          }
-      }
-  }
+    "name": "y",
+    "version": "y",
+    "description": "repo for practicing and sharing interview problmes",
+    "main": "y",
+    "repository": "y",
+    "author": "y",
+    "license": "y",
+    "private": true,
+    "dependencies": {
+        "babel-eslint": "^10.0.3",
+        "babel-jest": "^24.9.0",
+        "eslint": "^6.6.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-config-prettier": "^6.4.0",
+        "jest": "^24.9.0",
+        "lodash": "^4.17.15",
+        "prettier": "^1.18.2"
+    },
+    "jest": {
+        "collectCoverage": true,
+        "coveragePathIgnorePatterns": [
+            "/node_module/"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "statements": 100,
+                "branches": 100,
+                "functions": 100,
+                "lines": 100
+            }
+        }
+    }
 }
