@@ -14,7 +14,7 @@
         "eslint-config-airbnb": "^18.0.1",
         "eslint-config-prettier": "^6.4.0",
         "jest": "^24.9.0",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.19",
         "prettier": "^1.18.2"
     },
     "jest": {
