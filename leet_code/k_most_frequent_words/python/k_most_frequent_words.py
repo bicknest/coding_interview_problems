@@ -20,3 +20,10 @@ def k_most_frequent_words(words, k):
     final_words.extend(sort_count_list)
 
     return final_words[:k]
+
+
+def k_most_frequent_words_efficient(words, k):
+    count = Counter(words)
+    candidates = list(count.keys())
+    candidates.sort(key = lambda w: (-count[w], w))
+    return candidates[:k]
