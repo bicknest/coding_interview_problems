@@ -3,19 +3,16 @@ from collections import deque
 
 def minimum_knights_moves(x, y):
     distances = dict()
-    visited = set()
     frontier = deque()
 
     frontier.append((0, 0))
-    visited.add((0, 0))
     distances[(0, 0)] = 0
 
     while frontier:
         node = frontier.popleft()
-        node_neighbors = generate_knights_neighbors(node, visited)
+        node_neighbors = generate_knights_neighbors(node)
         for neighbor in node_neighbors:
-            if neighbor not in visited:
-                visited.add(neighbor)
+            if neighbor not in distances:
                 distances[neighbor] = distances[node] + 1
                 frontier.append(neighbor)
                 if neighbor == (x, y):
@@ -24,7 +21,7 @@ def minimum_knights_moves(x, y):
     
 
 
-def generate_knights_neighbors(coords, visited):
+def generate_knights_neighbors(coords):
     dirs = [[2, 1], [-2, 1], [2, -1], [-2, -1], [1, 2], [1, -2], [-1, -2], [-1, 2]]
     neighbors = []
     x, y = coords
