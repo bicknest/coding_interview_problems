@@ -1,3 +1,5 @@
+from collections import deque
+
 class NumberOfIslands:
 
     def __init__(self, grid):
@@ -30,11 +32,11 @@ class NumberOfIslands:
             for i, space in enumerate(row):
                 if space == "0" or (i, j) in self.visited:
                     continue
-                frontier = []
+                frontier = deque()
                 frontier.append((i, j))
                 self.visited.add((i, j))
                 while frontier:
-                    current_node = frontier.pop()
+                    current_node = frontier.popleft()
                     land_neighbors = self.land_neighbors(current_node)
                     for land_neighbor in land_neighbors:
                         if land_neighbor not in self.visited:
