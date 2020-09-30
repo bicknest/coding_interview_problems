@@ -20,7 +20,7 @@ if [ $python_changed -eq 0 ]; then
         exit 1
     fi
     COVERAGE_THRESHOLD=100
-    pipenv run pytest --cov=./ --cov-fail-under=$COVERAGE_THRESHOLD
+    pipenv run pytest --cov-report term-missing --cov=./ --cov-fail-under=$COVERAGE_THRESHOLD
     if [ $? -ne 0 ]
     then
         echo "Python test coverage for this diff is under ${COVERAGE_THRESHOLD}%, aborting commit"
